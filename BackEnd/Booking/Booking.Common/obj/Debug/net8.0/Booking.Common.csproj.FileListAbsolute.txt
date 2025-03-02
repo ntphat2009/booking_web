@@ -1,0 +1,12 @@
+D:\Booking Project\BackEnd\Booking\Booking.Common\bin\Debug\net8.0\Booking.Common.deps.json
+D:\Booking Project\BackEnd\Booking\Booking.Common\bin\Debug\net8.0\Booking.Common.dll
+D:\Booking Project\BackEnd\Booking\Booking.Common\bin\Debug\net8.0\Booking.Common.pdb
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.AssemblyInfoInputs.cache
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.AssemblyInfo.cs
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.csproj.CoreCompileInputs.cache
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.dll
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\refint\Booking.Common.dll
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.pdb
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\ref\Booking.Common.dll
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.csproj.AssemblyReference.cache

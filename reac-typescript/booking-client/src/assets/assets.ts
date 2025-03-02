@@ -1,0 +1,10 @@
+//css
+import "./css/bootstrap.css"
+import "./css/booking.css"
+import "./css/responsive.css"
+import "./css/ui.css"
+// import "./css/ui.css.map"
+// import "./css/bootstrap.css.map"
+// import "./css/responsive.css.map"
+import "./fonts/roboto/font.css"
+import "./fonts/fontawesome/css/all.min.css"
