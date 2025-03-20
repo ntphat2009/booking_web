@@ -40,7 +40,7 @@ namespace Booking.API.Controllers
         }
 
         [HttpPut("UpdateImageProperty")]
-        public async Task<IActionResult> UpdateImagePropertyAsync(ImagePropertyDTO image, Guid imageID)
+        public async Task<IActionResult> UpdateImagePropertyAsync(ImagePropertyDTO image, string imageID)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace Booking.API.Controllers
         }
 
         [HttpPut("DeletedImageProperty")]
-        public async Task<IActionResult> DeletedImagePropertyAsync(string deletedBy, Guid imageID)
+        public async Task<IActionResult> DeletedImagePropertyAsync(string deletedBy, string imageID)
         {
             try
             {

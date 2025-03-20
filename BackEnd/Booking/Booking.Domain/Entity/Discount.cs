@@ -12,7 +12,7 @@ namespace Booking.Domain.Entity
         Percentage,
         FixedAmount
     }
-    public class Discount : BaseEntity<Guid>
+    public class Discount : BaseEntity<string>
     {
         [StringLength(50)]
         public string DiscountCode { get; set; } = string.Empty;

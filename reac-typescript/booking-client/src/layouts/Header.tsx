@@ -1,21 +1,15 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import myImage from '../assets/image/flag/Vn@3x.png'
 import { jwtDecode, JwtPayload } from 'jwt-decode'
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 const Header = () => {
-    // setToken(sessionStorage.getItem('token'));
-    // useEffect(() => {
-    //     if (isAuthen) {
-    //         setToken('isAuthen');
-    //     }
-    // }, [isAuthen]);
     const [token, setToken] = useState<string>();
     const [payLoad, setPayLoad] = useState<JwtPayload>();
+    const [isOpen, setIsOpen] = useState<boolean>(false)
     useEffect(() => {
         const storedToken = sessionStorage.getItem('token');
-        console.log("in header", storedToken);
         if (storedToken) {
             setToken(storedToken);
             try {
@@ -41,7 +35,10 @@ const Header = () => {
             console.error("error to resend emailconfirm", error)
         }
     }
-    console.log(payLoad?.EmailConfirmed)
+
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    }
     return (
         <header>
             <ToastContainer></ToastContainer>
@@ -74,14 +71,56 @@ const Header = () => {
                                         <span>Đăng chỗ nghỉ của bạn</span>
                                     </button>
                                 </div>
-                                {token ? (<div className="col-2 auth">
-                                    <button onClick={handleLogout}>
-                                        <span>
-                                            Đăng xuất
-                                        </span>
-                                    </button>
+                                {token ? (
+                                    <>
 
-                                </div>) : (
+                                        <div className="col-2 dropdown">
+                                            <button onClick={handleClick} className="dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span>
+                                                    <i className="fas fa-envelope fs-2" style={{ color: "#fff" }}></i>
+                                                </span>
+                                            </button>
+                                            {isOpen ? (
+                                                <>
+                                                    <div className="dropdown-content">
+                                                        <div className='dropdown-arrow'></div>
+                                                        <div className='chat-box'>
+                                                            <div className='fs-4'>Đoạn chat</div>
+                                                            <a href="#">
+                                                                <p>Phat1</p>
+                                                                <span className='content'>Phòng này giá bao nhiêu</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <p>Phat1</p>
+                                                                <span className='content'>Phòng này giá bao nhiêu</span>
+                                                            </a>
+                                                            <a href="#">
+                                                                <p>Phat1</p>
+                                                                <span className='content'>Phòng này giá bao nhiêu</span>
+                                                            </a>
+                                                            <a className='more' href="#">
+                                                                <span>Xem tất cả</span>
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                </>
+                                            ) : (
+                                                ""
+                                            )}
+                                        </div>
+                                        <div className="col-2 auth">
+                                            <button onClick={handleLogout}>
+                                                <span>
+                                                    Đăng xuất
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div className="">
+                                            <span>{payLoad?.UserName}</span>
+                                        </div>
+                                    </>
+                                ) : (
                                     <>
                                         <div className="col-2 auth">
                                             <button>
@@ -112,7 +151,7 @@ const Header = () => {
                     <div className="space-background"></div>
                 </div>
             </div>
-        </header>
+        </header >
     )
 }
 

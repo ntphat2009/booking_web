@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Booking.Domain.Entity
 {
-    public class Room : BaseEntity<Guid>
+    public class Room : BaseEntity<string>
     {
-        public Guid PropertyID { get; set; }
+        public string PropertyId { get; set; }
         [StringLength(50)]
         public string RoomNumber { get; set; } = string.Empty;
         [StringLength(80)]

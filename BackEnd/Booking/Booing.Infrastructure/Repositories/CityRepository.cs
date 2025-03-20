@@ -76,7 +76,7 @@ namespace Booking.Infrastructure.Repositories
                 var newCity = new City()
                 {
                     Banner = city.Banner,
-                    CategoryID = city.CategoryID,
+                    CategoryId = city.CategoryId,
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
                     CreatedBy = city.CreatedBy,
@@ -112,7 +112,7 @@ namespace Booking.Infrastructure.Repositories
                     item.UpdatedAt = DateTime.Now;
                     item.UpdatedBy = city.UpdatedBy;
                     item.Banner = city.Banner;
-                    item.CategoryID = city.CategoryID;
+                    item.CategoryId = city.CategoryId;
                     item.IsDeleted = city.IsDeleted;
                     await _context.SaveChangesAsync();
                 }

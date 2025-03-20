@@ -22,12 +22,12 @@ namespace Booking.ApiService.Services
             await _imageRepository.AddImage(image);
         }
 
-        public async Task DeleteImage(string deletedBy, Guid imageID)
+        public async Task DeleteImage(string deletedBy, string imageID)
         {
             await _imageRepository.DeleteImage(deletedBy, imageID);
         }
 
-        public async Task UpdateImage(ImagePropertyDTO image, Guid imageID)
+        public async Task UpdateImage(ImagePropertyDTO image, string imageID)
         {
             await _imageRepository.UpdateImage(image, imageID);
         }

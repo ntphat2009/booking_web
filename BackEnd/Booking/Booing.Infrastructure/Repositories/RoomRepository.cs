@@ -76,7 +76,7 @@ namespace Booking.Infrastructure.Repositories
                 }
                 else
                 {
-                    item.PropertyID = room.PropertyID;
+                    item.PropertyId = room.PropertyId;
                     item.RoomNumber = roomNumber;
                     item.IsDeleted = false;
                     item.UpdatedAt = DateTime.Now;
@@ -102,8 +102,9 @@ namespace Booking.Infrastructure.Repositories
             {
                 var newRoom = new Room()
                 {
+                    Id= Guid.NewGuid().ToString(),
                     RoomNumber = room.RoomNumber,
-                    PropertyID = room.PropertyID,
+                    PropertyId = room.PropertyId,
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
                     CreatedBy = room.CreatedBy,

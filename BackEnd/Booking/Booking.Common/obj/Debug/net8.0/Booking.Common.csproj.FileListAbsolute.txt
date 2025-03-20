@@ -10,3 +10,4 @@ D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\refint\Bookin
 D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.pdb
 D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\ref\Booking.Common.dll
 D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.csproj.AssemblyReference.cache
+D:\Booking Project\BackEnd\Booking\Booking.Common\obj\Debug\net8.0\Booking.Common.sourcelink.json

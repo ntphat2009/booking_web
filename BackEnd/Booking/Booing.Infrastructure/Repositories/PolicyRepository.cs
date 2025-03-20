@@ -33,7 +33,7 @@ namespace Booking.Infrastructure.Repositories
                     UpdatedAt = DateTime.Now,
                     IsDeleted = false,
                     Value = policy.Value,
-                    PropertyID = policy.PropertyID
+                    PropertyId = policy.PropertyId
                 };
                 await _context.Services.AddAsync(newService);
                 await _context.SaveChangesAsync();
@@ -81,7 +81,7 @@ namespace Booking.Infrastructure.Repositories
                 else
                 {
                     item.IsDeleted = false;
-                    item.PropertyID = service.PropertyID;
+                    item.PropertyId = service.PropertyId;
                     item.Value = service.Value;
                     item.UpdatedAt = DateTime.Now;
                     item.UpdatedBy = service.UpdatedBy;

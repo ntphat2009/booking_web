@@ -14,7 +14,7 @@ namespace Booking.Domain.Entity
         [StringLength(150)]
         public string CityUrl { get; set; } = string.Empty;
         public Category Category { get; set; }
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
         public string Banner { get; set; } = string.Empty;
         public ICollection<Property> Properties { get; set; }
     }

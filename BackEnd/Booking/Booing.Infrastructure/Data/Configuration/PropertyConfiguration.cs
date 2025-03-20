@@ -21,7 +21,7 @@ namespace Booking.Infrastructure.Data.Configuration
                 .IsUnique();
             builder.HasOne(x => x.City)
                 .WithMany(x => x.Properties)
-                .HasForeignKey(x => x.CityID)
+                .HasForeignKey(x => x.CityId)
                 .OnDelete(DeleteBehavior.Restrict);
             builder.Property(p => p.AvgPrice)
                 .HasPrecision(18, 4);

@@ -1,17 +1,22 @@
-body{
+:root {
+    --header-background: #003b95;
+    --hover-background: #165bc2;
+    --seccondary-text: #b0b3b8;
+}
+
+body {
     font-family: Arial, sans-serif !important
 }
+
 /* header */
 header {
-    background-color: #003b95;
+    background-color: var(--header-background);
     padding: 1rem;
     min-height: 120px;
 }
 
 header>.container>.container-fluid {
-
     max-width: 1100px;
-
 }
 
 @media screen and (max-width: 1240px) {
@@ -28,13 +33,22 @@ header>.container>.container-fluid {
     }
 }
 
+.fs-8 {
+    font-size: 0.8rem !important;
+}
+
+.fs-9 {
+    font-size: 0.6rem !important;
+}
 .col-6.logo {
     max-width: 15rem;
     height: 3.5rem;
 }
-.col-6.logo>a>svg{
+
+.col-6.logo>a>svg {
     padding-top: 10px;
 }
+
 .col-2.head {
     max-width: 11%;
 }
@@ -44,12 +58,12 @@ header>.container>.container-fluid {
     /* hoặc một màu gần với nền */
     border: none;
     border-radius: 0.5rem;
-    width: 3.5rem;
     height: 3.5rem;
+    padding: 0 15px;
 }
 
 .col-2>button:hover {
-    background-color: #165bc2;
+    background-color: var(--hover-background);
 }
 
 .col-2>button>span {
@@ -109,7 +123,7 @@ header>.container>.container-fluid {
 }
 
 .sub>button:hover {
-    background-color: #165bc2;
+    background-color: var(--hover-background);
 }
 
 .auth>button {
@@ -129,7 +143,7 @@ header>.container>.container-fluid {
 }
 
 .auth>button:hover span {
-    background-color: #165bc2;
+    background-color: var(--hover-background);
     color: white;
 }
 
@@ -371,7 +385,7 @@ p {
 
 .deals>.container-history>.container-info>button:hover {
     color: #fff;
-    background-color: #165bc2;
+    background-color: var(--hover-background);
 }
 
 .dead-img {
@@ -672,7 +686,7 @@ button:focus {
 }
 
 .ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content>span.ui-slider-handle {
-    background-color: #003b95;
+    background-color: var(--header-background);
 }
 
 .ui-slider.ui-corner-all.ui-slider-horizontal.ui-widget.ui-widget-content>span.ui-state-active {
@@ -841,24 +855,28 @@ footer {
 }
 
 /* property */
-.more-option{
+.more-option {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.fas-icon{
+
+.fas-icon {
     color: dodgerblue;
 }
-.more-option>div>i{
+
+.more-option>div>i {
     font-size: large;
 }
-.PriceMatch{
+
+.PriceMatch {
     color: dodgerblue;
     font-weight: 400;
     white-space: nowrap;
     float: right;
 }
+
 .image-gallery {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -868,15 +886,17 @@ footer {
     max-width: 900px;
     margin: auto;
 }
+
 .image-more {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
     gap: 10px;
     width: 100%;
     max-width: 900px;
     margin-top: 10px;
 }
+
 .image {
     position: relative;
     overflow: hidden;
@@ -912,7 +932,8 @@ footer {
 .most-rate {
     display: flex;
     align-items: center;
-    gap: 10px; /* Khoảng cách giữa các phần tử */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
     justify-content: end;
     padding: 10px;
 }
@@ -934,61 +955,232 @@ footer {
 }
 
 .average-point {
-    background-color: #003b95;
+    background-color: var(--header-background);
     color: white;
     font-weight: bold;
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 5px 5px 5px 0;
 }
-.random-review{
+
+.random-review {
     padding: 15px;
     font-size: 12px;
     line-height: 20px;
 }
 
-.des{
+.des {
     font-size: 14px;
     line-height: 22px;
 }
-.rule{
+
+.rule {
     font-size: 14px;
     line-height: 22px;
     padding: 10px;
 }
-.mt-4>table>thead{
+
+.mt-4>table>thead {
     background-color: #4c76b2;
     color: #fff;
 }
-td{
-    padding:10px 00px;
+
+td {
+    padding: 10px 00px;
 }
-.table > :not(caption) > * > * {
+
+.table> :not(caption)>*>* {
     padding: 0rem;
     color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
     background-color: transparent;
     border-bottom-width: var(--bs-border-width);
     box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
-  }
-a{
-    text-decoration:none !important;
-    color:black
 }
-.img-account-review{
+
+a {
+    text-decoration: none !important;
+    color: black
+}
+
+.img-account-review {
     max-width: 6rem;
     max-height: 6rem;
     margin-right: 10px;
     margin-bottom: 20px;
 
 }
-.review{
+
+.review {
     margin-top: 20px;
 }
-.btn.btn-info-nothover{
+
+.btn.btn-info-nothover {
     background-color: dodgerblue !important;
     color: white !important;
     font-weight: bolder !important;
     border-radius: 0.3rem;
     padding: 0.5rem !important;
     font-size: 12px;
+}
+
+/* Tạo container cho dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nút dropdown */
+.dropdown-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Nội dung dropdown (ẩn mặc định) */
+.chat-box {
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: var(--header-background);
+    min-width: 16rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 2px solid lightblue;
+    top: 110%;
+    /* Đẩy xuống một chút */
+    left: -34%;
+    z-index: 1000;
+}
+
+/* Mũi nhọn tam giác */
+.dropdown-content .dropdown-arrow {
+    position: absolute;
+    top: -10px;
+    /* Điều chỉnh vị trí tam giác */
+    left: 30%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Các mục trong dropdown */
+.dropdown-content a {
+    color: white;
+    font-weight: bolder;
+    padding: 10px 0 6px 6px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.dropdown-content a .content {
+    font-size: 10px;
+    color: var(--seccondary-text);
+    font-weight: lighter;
+}
+
+/* Hover vào mục dropdown */
+.dropdown-content a:hover {
+    background-color: var(--hover-background);
+}
+
+/* Hiển thị dropdown khi hover vào nút */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hiệu ứng hover cho nút */
+.dropdown-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Khung chat cố định ở góc phải màn hình */
+.chatbox-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Header của khung chat */
+.chatbox-header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Phần hiển thị tin nhắn */
+.chatbox-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.container-message {
+    margin-top: 10px;
+}
+
+.container-message.text-end+.container-message.text-start,
+.container-message.text-start+.container-message.text-end {
+    margin-top: 20px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.message.received {
+    background-color: #e0e0e0;
+}
+
+.message.sent {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.chatbox-input {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.chatbox-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.non-style-button {
+    background-color: transparent;
+    border: none;
 }

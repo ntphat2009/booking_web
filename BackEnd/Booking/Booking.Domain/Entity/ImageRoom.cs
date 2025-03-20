@@ -8,7 +8,7 @@ namespace Booking.Domain.Entity
 {
     public class ImageRoom : BaseImage
     {
-        public Guid RoomID { get; set; }
+        public string RoomId { get; set; }
         public Room Room { get; set; }
     }
 }

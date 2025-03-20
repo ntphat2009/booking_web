@@ -15,15 +15,15 @@ namespace Booking.Infrastructure.Data.Configuration
         {
             builder.ToTable("Books");
             builder.HasKey(x => x.Id);
-            builder.HasIndex(x => x.RoomID);
-            builder.HasIndex(x => x.UserID);
+            builder.HasIndex(x => x.RoomId);
+            builder.HasIndex(x => x.UserId);
             builder.HasOne(x => x.Room)
                 .WithMany(x => x.Books)
-                .HasForeignKey(x => x.RoomID)
+                .HasForeignKey(x => x.RoomId)
                 .OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(x => x.User)
                 .WithMany(x => x.Books)
-                .HasForeignKey(x => x.UserID)
+                .HasForeignKey(x => x.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
             builder.Property(p => p.BookingStatus)
                 .HasConversion<string>()

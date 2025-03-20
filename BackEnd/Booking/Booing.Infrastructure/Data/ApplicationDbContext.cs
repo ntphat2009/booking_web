@@ -25,6 +25,7 @@ namespace Booking.Infrastructure.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<Discount> Discounts { get; set; }
+        public DbSet<Tag> Tags { get; set; }
         private void SetRoles(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<IdentityRole>().HasData
@@ -50,6 +51,7 @@ namespace Booking.Infrastructure.Data
             builder.ApplyConfiguration(new ServiceConfiguration());
             builder.ApplyConfiguration(new DiscountConfiguration());
             builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new TagConfiguration());
             base.OnModelCreating(builder);
         }
     }

@@ -20,5 +20,6 @@ namespace Booking.Domain.Entity
         [StringLength(150)]
         public string NameUrl { get; set; } = string.Empty;
         public ICollection<Book> Books { get; set; }
+        public ICollection<Property> Properties { get; set; }
     }
 }

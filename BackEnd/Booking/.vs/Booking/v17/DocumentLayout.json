@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\Booking Project\\BackEnd\\Booking\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|d:\\booking project\\backend\\booking\\booking.api\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|D:\\Booking Project\\BackEnd\\Booking\\booking.api\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|D:\\Booking Project\\BackEnd\\Booking\\booking.api\\hubs\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\hubs\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|d:\\booking project\\backend\\booking\\booking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|D:\\Booking Project\\BackEnd\\Booking\\booking.api\\controllers\\authenticationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\controllers\\authenticationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|D:\\Booking Project\\BackEnd\\Booking\\booking.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|D:\\Booking Project\\BackEnd\\Booking\\booking.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3515C5FA-90B3-4FF4-951D-D9C4B4F92FE6}|Booking.API\\Booking.API.csproj|solutionrelative:booking.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +34,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Booking.API\\appsettings.json",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\appsettings.json",
+              "RelativeToolTip": "Booking.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-19T18:04:19.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Booking.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Booking.API\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-19T06:16:28.801Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +69,48 @@
               "RelativeDocumentMoniker": "Booking.API\\Hubs\\ChatHub.cs",
               "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Hubs\\ChatHub.cs",
               "RelativeToolTip": "Booking.API\\Hubs\\ChatHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T18:19:05.616Z",
+              "WhenOpened": "2025-03-15T03:32:04.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomUserIdProvider.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Hubs\\CustomUserIdProvider.cs",
+              "RelativeDocumentMoniker": "Booking.API\\Hubs\\CustomUserIdProvider.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Hubs\\CustomUserIdProvider.cs",
+              "RelativeToolTip": "Booking.API\\Hubs\\CustomUserIdProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T04:17:37.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthenticationsController.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Controllers\\AuthenticationsController.cs",
+              "RelativeDocumentMoniker": "Booking.API\\Controllers\\AuthenticationsController.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Controllers\\AuthenticationsController.cs",
+              "RelativeToolTip": "Booking.API\\Controllers\\AuthenticationsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T03:45:24.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Program.cs",
+              "RelativeDocumentMoniker": "Booking.API\\Program.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\Booking\\Booking.API\\Program.cs",
+              "RelativeToolTip": "Booking.API\\Program.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAFcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T03:41:31.592Z",
               "EditorCaption": ""
             }
           ]

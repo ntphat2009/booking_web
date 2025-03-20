@@ -9,7 +9,7 @@ namespace Booking.Infrastructure.DTOs
 {
     public class RoomDTO:BaseDTO
     {
-        public Guid PropertyID { get; set; }
+        public string PropertyId { get; set; }
         public string RoomNumber { get; set; } = string.Empty;
         public string RoomUrl { get; set; } = string.Empty;
         public string RoomType { get; set; } = string.Empty;

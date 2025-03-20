@@ -19,7 +19,7 @@ namespace Booking.Infrastructure.Data.Configuration
                 .IsUnique();
             builder.HasOne(x => x.Property)
                 .WithMany(x=>x.Rooms)
-                .HasForeignKey(x => x.PropertyID)
+                .HasForeignKey(x => x.PropertyId)
                 .OnDelete(DeleteBehavior.Restrict);
             builder.Property(p => p.PricePerNight)
                 .HasPrecision(18, 4);

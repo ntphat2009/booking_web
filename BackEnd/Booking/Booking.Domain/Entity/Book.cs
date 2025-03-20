@@ -14,10 +14,10 @@ namespace Booking.Domain.Entity
         Complete,
         Cancel
     }
-    public class Book:BaseEntity<Guid>
+    public class Book:BaseEntity<string>
     {
-        public string UserID { get; set; }
-        public Guid RoomID { get; set; }
+        public string UserId { get; set; }
+        public string RoomId{ get; set; }
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set;}
         public decimal TotalPrice { get; set; }

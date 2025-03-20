@@ -11,7 +11,9 @@ namespace Booking.Infrastructure.DTOs
     {
         public string Name { get; set; } = string.Empty;
         public string PropertyUrl { get; set; } = string.Empty;
-        public int CityID { get; set; }
+        public int CityId { get; set; }
+        public string UserId { get; set; }
+        public string Description { get; set; } = string.Empty;
         public string Street { get; set; } = string.Empty;
         public string District { get; set; } = string.Empty;
         public decimal AvgPrice { get; set; }

@@ -1,4 +1,4 @@
-using Booking.ApiService.Services;
+﻿using Booking.ApiService.Services;
 using Booking.ApiService.Services.Interfaces;
 using Booking.Common.Configuration;
 using Booking.Common.Service.Interfaces;
@@ -14,6 +14,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
 using Booking.API.Hubs;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.Extensions.Options;
 
 
 namespace Booking.API
@@ -25,9 +27,14 @@ namespace Booking.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
             builder.Services.AddControllers();
-            builder.Services.AddSignalR();
+
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(opt =>
@@ -61,6 +68,7 @@ namespace Booking.API
             //connec to SQLServer
             var connectionString = builder.Configuration.GetConnectionString("Booking");
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             builder.Services.AddAuthentication(option =>
             {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -69,6 +77,19 @@ namespace Booking.API
             })
                 .AddJwtBearer(option =>
                 {
+
+                    option.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+                            if (string.IsNullOrEmpty(accessToken) == false)
+                            {
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                     option.SaveToken = true;
                     option.RequireHttpsMetadata = false;
                     option.TokenValidationParameters = new TokenValidationParameters
@@ -80,11 +101,12 @@ namespace Booking.API
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
                     };
                 });
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             //Add Email and Twilio Configs
             builder.Services.Configure<IdentityOptions>(opts => opts.SignIn.RequireConfirmedEmail = false);
             builder.Services.Configure<DataProtectionTokenProviderOptions>(opts => opts.TokenLifespan = TimeSpan.FromHours(5));
             var emailConfig = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+            builder.Services.AddSignalR();
+            builder.Services.AddSingleton<IUserIdProvider, CustomUserIdProvider>();
             //var speedSmsConfig = builder.Configuration.GetSection("SpeedSMS").Get<SpeedSMSAPIConfiguration>();
             builder.Services.AddSingleton(emailConfig);
             //builder.Services.AddSingleton(speedSmsConfig);
@@ -127,9 +149,11 @@ namespace Booking.API
                 app.UseSwaggerUI();
             }
             app.UseHttpsRedirection();
-            app.MapHub<ChatHub>("/chatHub");
-            app.UseAuthorization();
+            app.UseCookiePolicy();
             app.UseCors("AllowSpecificOrigin");
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.MapHub<ChatHub>("/chatHub");
             app.MapControllers();
 
             app.Run();

@@ -39,7 +39,7 @@ namespace Booking.API.Controllers
         }
 
         [HttpPut("UpdateImageRoom")]
-        public async Task<IActionResult> UpdateImageRoomAsync(ImageRoomDTO image, Guid imageID)
+        public async Task<IActionResult> UpdateImageRoomAsync(ImageRoomDTO image, string imageID)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace Booking.API.Controllers
         }
 
         [HttpPut("DeletedImageRoom")]
-        public async Task<IActionResult> DeletedImageRoomAsync(string deletedBy, Guid imageID)
+        public async Task<IActionResult> DeletedImageRoomAsync(string deletedBy, string imageID)
         {
             try
             {

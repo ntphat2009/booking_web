@@ -60,6 +60,7 @@ namespace Booking.Infrastructure.Repositories
            .Where(x => !x.IsDeleted)
            .Include(x => x.ImageProperties)
            .Include(x => x.City)
+           .Include(x => x.User)
            .FirstOrDefaultAsync(x => x.PropertyUrl == propertyUrl);
             return item ?? new Property();
         }
@@ -70,17 +71,20 @@ namespace Booking.Infrastructure.Repositories
             {
                 var newProperty = new Property()
                 {
+                    Id = Guid.NewGuid().ToString(),
                     PropertyUrl = ToUrl(property.Name + DateTime.Now.TimeOfDay),
                     Name = property.Name,
                     AvgPrice = property.AvgPrice,
                     IsDeleted = false,
-                    CityID = property.CityID,
+                    CityId = property.CityId,
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
                     District = property.District,
                     CreatedBy = property.CreatedBy,
                     Rule = property.Rule,
                     Street = property.Street,
+                    UserId = property.UserId,
+                    Description = property.Description,
                 };
                 await _dbContext.Properties.AddAsync(newProperty);
                 await _dbContext.SaveChangesAsync();
@@ -105,12 +109,13 @@ namespace Booking.Infrastructure.Repositories
                 {
                     item.PropertyUrl = ToUrl(property.Name + DateTime.Now.TimeOfDay);
                     item.Name = property.Name;
+                    item.Description = property.Description;
                     item.District = property.District;
                     item.Street = property.Street;
                     item.UpdatedBy = property.UpdatedBy;
                     item.UpdatedAt = DateTime.Now;
                     item.AvgPrice = property.AvgPrice;
-                    item.CityID = property.CityID;
+                    item.CityId = property.CityId;
                     item.Rule = property.Rule;
                     await _dbContext.SaveChangesAsync();
                 }

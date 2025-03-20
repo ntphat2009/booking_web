@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Booking.Infrastructure.DTOs
 {
-    public class ImageRoomDTO : BaseDTO
+   
+    public class ImageRoomDTO : BaseImageDTO
     {
         public string ImageURL { get; set; } = string.Empty;
         public string ImageName { get; set; } = string.Empty;
-        public Guid RoomID { get; set; }
+        public string RoomId { get; set; }
+        public MyImageType ImageType { get; set; }
     }
 }

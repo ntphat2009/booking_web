@@ -120,7 +120,9 @@ namespace Booking.Infrastructure.Repositories
                     {
                         new("UserName",signIn.UserName),
                         new(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-                        new("EmailConfirmed",account.EmailConfirmed.ToString())
+                        new("EmailConfirmed",account.EmailConfirmed.ToString()),
+                        new(ClaimTypes.Email,account.Email),
+
                     };
                     var userRoles = await _user.GetRolesAsync(account);
                     foreach (var role in userRoles)

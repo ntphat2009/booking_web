@@ -28,11 +28,13 @@ namespace Booking.Infrastructure.Repositories
             {
                 var newImage = new ImageProperty()
                 {
+                    Id = Guid.NewGuid().ToString(),
                     CreatedAt = DateTime.Now,
                     CreatedBy = image.CreatedBy,
                     ImageName = image.ImageName,
+                    ImageType = (MyImageType)image.ImageType,
                     IsDeleted = false,
-                    PropertyID = image.PropertyID,
+                    PropertyId = image.PropertyId,
                     ImageURL = image.ImageURL,
                     UpdatedAt = DateTime.Now,
                 };
@@ -46,11 +48,11 @@ namespace Booking.Infrastructure.Repositories
             }
         }
 
-        public async Task UpdateImage(ImagePropertyDTO image, Guid imageID)
+        public async Task UpdateImage(ImagePropertyDTO image, string imageId)
         {
             try
             {
-                var item = _context.ImageProperties.FirstOrDefault(x => x.Id == imageID);
+                var item = _context.ImageProperties.FirstOrDefault(x => x.Id == imageId);
                 if (item == null)
                 {
                     throw new Exception("id not found");
@@ -58,8 +60,9 @@ namespace Booking.Infrastructure.Repositories
                 else
                 {
                     item.ImageName = image.ImageName;
+                    item.ImageType = (MyImageType)image.ImageType;
                     item.IsDeleted = false;
-                    item.PropertyID = image.PropertyID;
+                    item.PropertyId = image.PropertyId;
                     item.ImageURL = image.ImageURL;
                     item.UpdatedAt = DateTime.Now;
                     item.CreatedAt = DateTime.Now;
@@ -74,7 +77,7 @@ namespace Booking.Infrastructure.Repositories
             }
         }
 
-        public async Task DeleteImage(string deletedBy, Guid imageID)
+        public async Task DeleteImage(string deletedBy, string imageID)
         {
             try
             {

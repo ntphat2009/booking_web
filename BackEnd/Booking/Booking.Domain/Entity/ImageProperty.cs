@@ -8,7 +8,7 @@ namespace Booking.Domain.Entity
 {
     public class ImageProperty : BaseImage
     {
-        public Guid PropertyID { get; set; }
+        public string PropertyId { get; set; }
         public Property Property { get; set; }
     }
 }

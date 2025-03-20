@@ -102,3 +102,4 @@ D:\Booking Project\BackEnd\Booking\Booking.API\bin\Debug\net8.0\Microsoft.Extens
 D:\Booking Project\BackEnd\Booking\Booking.API\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
 D:\Booking Project\BackEnd\Booking\Booking.API\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 D:\Booking Project\BackEnd\Booking\Booking.API\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Booking Project\BackEnd\Booking\Booking.API\obj\Debug\net8.0\Booking.API.sourcelink.json

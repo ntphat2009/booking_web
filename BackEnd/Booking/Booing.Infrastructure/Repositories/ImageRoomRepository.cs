@@ -29,11 +29,13 @@ namespace Booking.Infrastructure.Repositories
             {
                 var newImage = new ImageRoom()
                 {
+                    Id = Guid.NewGuid().ToString(),
                     CreatedAt = DateTime.Now,
                     CreatedBy = image.CreatedBy,
                     ImageName = image.ImageName,
+                    ImageType = (MyImageType)image.ImageType,
                     IsDeleted = false,
-                    RoomID = image.RoomID,
+                    RoomId = image.RoomId,
                     ImageURL = image.ImageURL,
                     UpdatedAt = DateTime.Now,
                 };
@@ -47,11 +49,11 @@ namespace Booking.Infrastructure.Repositories
             }
         }
 
-        public async Task DeleteImage(string deletedBy, Guid imageID)
+        public async Task DeleteImage(string deletedBy, string imageId)
         {
             try
             {
-                var item = await _context.ImageRooms.FirstOrDefaultAsync(x => x.Id == imageID);
+                var item = await _context.ImageRooms.FirstOrDefaultAsync(x => x.Id == imageId);
                 if (item == null)
                 {
                     throw new Exception("id not found");
@@ -71,11 +73,11 @@ namespace Booking.Infrastructure.Repositories
             }
         }
 
-        public async Task UpdateImage(ImageRoomDTO image, Guid imageID)
+        public async Task UpdateImage(ImageRoomDTO image, string imageId)
         {
             try
             {
-                var item = await _context.ImageRooms.FirstOrDefaultAsync(x => x.Id == imageID);
+                var item = await _context.ImageRooms.FirstOrDefaultAsync(x => x.Id == imageId);
                 if (item == null)
                 {
                     throw new Exception("id not found");
@@ -83,8 +85,9 @@ namespace Booking.Infrastructure.Repositories
                 else
                 {
                     item.ImageName = image.ImageName;
+                    item.ImageType = (MyImageType)image.ImageType;
                     item.IsDeleted = false;
-                    item.RoomID = image.RoomID;
+                    item.RoomId = image.RoomId;
                     item.ImageURL = image.ImageURL;
                     item.CreatedAt = DateTime.Now;
                     item.UpdatedAt = DateTime.Now;

@@ -17,3 +17,4 @@ D:\Booking Project\BackEnd\Booking\Booing.Infrastructure\obj\Debug\net8.0\Bookin
 D:\Booking Project\BackEnd\Booking\Booing.Infrastructure\obj\Debug\net8.0\ref\Booking.Infrastructure.dll
 D:\Booking Project\BackEnd\Booking\Booing.Infrastructure\bin\Debug\net8.0\Booking.Common.dll
 D:\Booking Project\BackEnd\Booking\Booing.Infrastructure\bin\Debug\net8.0\Booking.Common.pdb
+D:\Booking Project\BackEnd\Booking\Booing.Infrastructure\obj\Debug\net8.0\Booking.Infrastructure.sourcelink.json

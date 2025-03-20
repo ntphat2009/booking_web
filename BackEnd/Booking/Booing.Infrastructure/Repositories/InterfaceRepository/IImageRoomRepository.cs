@@ -11,7 +11,7 @@ namespace Booking.Infrastructure.Repositories.InterfaceRepository
     public interface IImageRoomRepository
     {
         public Task AddImage(ImageRoomDTO image);
-        public Task UpdateImage(ImageRoomDTO image, Guid imageID);
-        public Task DeleteImage(string deletedBy, Guid imageID);
+        public Task UpdateImage(ImageRoomDTO image, string imageID);
+        public Task DeleteImage(string deletedBy, string imageID);
     }
 }

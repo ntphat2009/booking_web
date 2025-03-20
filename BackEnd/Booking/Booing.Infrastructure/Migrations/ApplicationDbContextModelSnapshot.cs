@@ -108,9 +108,8 @@ namespace Booking.Infrastructure.Migrations
 
             modelBuilder.Entity("Booking.Domain.Entity.Book", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BookingStatus")
                         .IsRequired()
@@ -134,8 +133,9 @@ namespace Booking.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("RoomID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("RoomId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("TotalPrice")
                         .HasPrecision(18, 4)
@@ -149,15 +149,15 @@ namespace Booking.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("UserID")
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoomID");
+                    b.HasIndex("RoomId");
 
-                    b.HasIndex("UserID");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Books", (string)null);
                 });
@@ -234,7 +234,7 @@ namespace Booking.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CategoryID")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("CityUrl")
@@ -268,7 +268,7 @@ namespace Booking.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryID");
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("CityUrl")
                         .IsUnique();
@@ -281,9 +281,8 @@ namespace Booking.Infrastructure.Migrations
 
             modelBuilder.Entity("Booking.Domain.Entity.Discount", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -332,9 +331,8 @@ namespace Booking.Infrastructure.Migrations
 
             modelBuilder.Entity("Booking.Domain.Entity.ImageProperty", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -349,6 +347,9 @@ namespace Booking.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int>("ImageType")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -356,8 +357,9 @@ namespace Booking.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("PropertyID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("PropertyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -369,16 +371,15 @@ namespace Booking.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PropertyID");
+                    b.HasIndex("PropertyId");
 
                     b.ToTable("ImagePropertíe", (string)null);
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.ImageRoom", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -393,6 +394,9 @@ namespace Booking.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int>("ImageType")
+                        .HasColumnType("int");
+
                     b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -400,8 +404,9 @@ namespace Booking.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("RoomID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("RoomId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -413,22 +418,21 @@ namespace Booking.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoomID");
+                    b.HasIndex("RoomId");
 
                     b.ToTable("ImageRooms", (string)null);
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.Property", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("AvgPrice")
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<int>("CityID")
+                    b.Property<int>("CityId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -438,6 +442,10 @@ namespace Booking.Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("District")
                         .IsRequired()
@@ -474,9 +482,13 @@ namespace Booking.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CityID");
+                    b.HasIndex("CityId");
 
                     b.HasIndex("Name")
                         .IsUnique();
@@ -484,14 +496,15 @@ namespace Booking.Infrastructure.Migrations
                     b.HasIndex("PropertyUrl")
                         .IsUnique();
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Properties", (string)null);
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.Room", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -514,8 +527,9 @@ namespace Booking.Infrastructure.Migrations
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<Guid>("PropertyID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("PropertyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("RoomNumber")
                         .IsRequired()
@@ -542,7 +556,7 @@ namespace Booking.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PropertyID");
+                    b.HasIndex("PropertyId");
 
                     b.HasIndex("RoomNumber")
                         .IsUnique();
@@ -569,8 +583,9 @@ namespace Booking.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("PropertyID")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("PropertyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -588,9 +603,50 @@ namespace Booking.Infrastructure.Migrations
 
                     b.HasIndex("Id");
 
-                    b.HasIndex("PropertyID");
+                    b.HasIndex("PropertyId");
 
                     b.ToTable("Services", (string)null);
+                });
+
+            modelBuilder.Entity("Booking.Domain.Entity.Tag", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PropertyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TagName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id");
+
+                    b.HasIndex("PropertyId");
+
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -622,21 +678,21 @@ namespace Booking.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "318bf28e-77cb-4284-aa7b-1a3fc48b205e",
+                            Id = "7183262a-6db1-4aae-b3a8-12bc2033f003",
                             ConcurrencyStamp = "1",
                             Name = "User",
                             NormalizedName = "User"
                         },
                         new
                         {
-                            Id = "58d5f649-ce9c-4211-84cc-25424680ac8b",
+                            Id = "e6dc48b8-51fc-4f34-84d4-d98aa8328c37",
                             ConcurrencyStamp = "2",
                             Name = "Partner",
                             NormalizedName = "Partner"
                         },
                         new
                         {
-                            Id = "522043db-cd9e-43ba-b58b-e5b08f891370",
+                            Id = "8cb7fd08-0f9b-4fd5-817a-abb20e242ce9",
                             ConcurrencyStamp = "3",
                             Name = "Admin",
                             NormalizedName = "Admin"
@@ -753,13 +809,13 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.Room", "Room")
                         .WithMany("Books")
-                        .HasForeignKey("RoomID")
+                        .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Booking.Domain.Entity.ApplicationUser", "User")
                         .WithMany("Books")
-                        .HasForeignKey("UserID")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -772,7 +828,7 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.Category", "Category")
                         .WithMany("Cities")
-                        .HasForeignKey("CategoryID")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -783,7 +839,7 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.Property", "Property")
                         .WithMany("ImageProperties")
-                        .HasForeignKey("PropertyID")
+                        .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -794,7 +850,7 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.Room", "Room")
                         .WithMany("ImageRooms")
-                        .HasForeignKey("RoomID")
+                        .HasForeignKey("RoomId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -805,18 +861,26 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.City", "City")
                         .WithMany("Properties")
-                        .HasForeignKey("CityID")
+                        .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("Booking.Domain.Entity.ApplicationUser", "User")
+                        .WithMany("Properties")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("City");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.Room", b =>
                 {
                     b.HasOne("Booking.Domain.Entity.Property", "Property")
                         .WithMany("Rooms")
-                        .HasForeignKey("PropertyID")
+                        .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -827,7 +891,18 @@ namespace Booking.Infrastructure.Migrations
                 {
                     b.HasOne("Booking.Domain.Entity.Property", "Property")
                         .WithMany("Services")
-                        .HasForeignKey("PropertyID")
+                        .HasForeignKey("PropertyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Property");
+                });
+
+            modelBuilder.Entity("Booking.Domain.Entity.Tag", b =>
+                {
+                    b.HasOne("Booking.Domain.Entity.Property", "Property")
+                        .WithMany("Tags")
+                        .HasForeignKey("PropertyId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
@@ -888,6 +963,8 @@ namespace Booking.Infrastructure.Migrations
             modelBuilder.Entity("Booking.Domain.Entity.ApplicationUser", b =>
                 {
                     b.Navigation("Books");
+
+                    b.Navigation("Properties");
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.Category", b =>
@@ -907,6 +984,8 @@ namespace Booking.Infrastructure.Migrations
                     b.Navigation("Rooms");
 
                     b.Navigation("Services");
+
+                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Booking.Domain.Entity.Room", b =>

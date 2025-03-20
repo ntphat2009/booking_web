@@ -10,6 +10,6 @@ namespace Booking.Domain.Entity
     {
         public string Value { get; set; } = string.Empty;
         public Property Property { get; set; }
-        public Guid PropertyID { get; set; }
+        public string PropertyId { get; set; }
     }
 }

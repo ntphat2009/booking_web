@@ -17,7 +17,7 @@ namespace Booking.Infrastructure.Data.Configuration
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.Property)
                 .WithMany(x => x.ImageProperties)
-                .HasForeignKey(x => x.PropertyID)
+                .HasForeignKey(x => x.PropertyId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

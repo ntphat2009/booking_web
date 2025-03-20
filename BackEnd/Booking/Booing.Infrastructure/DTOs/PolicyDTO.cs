@@ -9,6 +9,6 @@ namespace Booking.Infrastructure.DTOs
     public class PolicyDTO : BaseDTO
     {
         public string Value { get; set; } = string.Empty;
-        public Guid PropertyID { get; set; }
+        public string PropertyId { get; set; }
     }
 }
