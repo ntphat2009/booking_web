@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 const SignIn = () => {
     const [userName, setUserName] = useState<string>('');
     const [password, setPassword] = useState<string>('');
-    const navigate = useNavigate();
-    const handleLogin = async (e:any) => {
+    const handleLogin = async (e:React.FormEvent) => {
         e.preventDefault();
         try {
             const response = await fetch('https://localhost:7214/api/Authentications/SignIn', {

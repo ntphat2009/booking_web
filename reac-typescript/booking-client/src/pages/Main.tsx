@@ -5,7 +5,7 @@ import SignIn from './authentication/SignIn';
 import SignUp from './authentication/SignUp';
 import VerifyEmailSuccess from './authentication/VerifyEmailSuccess';
 import ListProperty from './searchResult/ListProperty';
-import PropertyDescription from './searchResult/PropertyDescription';
+import PropertyDescription from './searchResult/PropertyDes';
 const Main: React.FC = () => {
   return (
     <BrowserRouter>

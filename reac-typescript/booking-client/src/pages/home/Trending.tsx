@@ -11,20 +11,14 @@ const Trending: React.FC = () => {
 
         const fetchApi = async () => {
             try {
-                const response = await axios.get("https://localhost:7214/Categories/GetAllCategory?page=1&pageSize=10&sortBy=date_desc");
-                if (response == null) {
-                    throw "response was null"
-                }
-                else {
-                    setCategories(response.data)
-                }
+                const response = await axios.get("https://localhost:7214/Categories?page=1&pageSize=10&sortBy=date_desc");
+                setCategories(response.data)
             } catch (error) {
                 console.log(error)
             }
         }
         fetchApi();
         return () => {
-
         };
     }, []);
     const settings = {
@@ -111,7 +105,7 @@ const Trending: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="list-city">
+            {/* <div className="list-city">
                 <Slider {...settings} className="slick-slidee">
                     {
                         categories && categories.length > 0 ? (
@@ -128,7 +122,7 @@ const Trending: React.FC = () => {
                         )
                     }
                 </Slider>
-            </div>
+            </div> */}
         </div>
     )
 }

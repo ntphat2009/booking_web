@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import myImage from '../assets/image/flag/Vn@3x.png'
 import { jwtDecode, JwtPayload } from 'jwt-decode'
 import axios from 'axios';
@@ -25,10 +25,10 @@ const Header = () => {
         sessionStorage.removeItem('token');
         window.location.href = '/sign-in';
     };
-    const handleReSendEmailConfirm = async (e: any) => {
+    const handleReSendEmailConfirm = async (e: React.MouseEvent) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://localhost:7214/api/Authentications/ReSendEmailConfirm?userName=${payLoad?.UserName}`)
+            await axios.post(`https://localhost:7214/api/Authentications/ReSendEmailConfirm?userName=${payLoad?.UserName}`)
             toast.info("Chúng tôi đã gữi yêu cầu xác thực về email của bạn. Vui lòng ấn xác nhận để tiếp tục đặt chỗ")
         }
         catch (error) {

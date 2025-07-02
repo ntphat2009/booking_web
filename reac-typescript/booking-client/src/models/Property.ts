@@ -1,31 +1,20 @@
 import { BaseModel } from "./BaseModel";
-import { User } from './User';
-export enum MyImageType {
-  Larger = 0,
-  Small = 1,
-  Smaller = 2
-}
-interface ImageProperties extends BaseModel {
-  PropertyID: string;
-  ImageURL: string;
-  ImageName: string;
-  ImageType: MyImageType;
-}
-// import {ImageProperties} from "./ImageProperties"
 export interface Property extends BaseModel {
+  Id: string;
   Name: string;
   PropertyUrl: string;
-  CityID: number;
-  City: any;
+  CityUrl: string;
+  CityId: string | null;
+  CityName: string;
   Street: string;
   District: string;
   AvgPrice: number;
   Rule: string;
-  Services: any;
-  ImageProperties: ImageProperties[];
-  Rooms: any;
-  Id: string;
-  Description:string;
-  UserId:string;
-  User : User
+  Description: string;
+  UserId: string;
+  UserMail: string;
+  Services: string[] | null;
+  ImageProperty: string | null;
+  Rooms: string[] | null;
+  Tags: string[] | null;
 }

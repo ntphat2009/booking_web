@@ -743,7 +743,11 @@ input[type="checkbox" i].cb-button {
 .product-img {
     border-radius: 12px;
 }
-
+.img-cart-product{
+    overflow: hidden;
+    width: 100%;    
+    border-radius: 12px;
+}
 /* .product-info{
     display: flex;
     row-gap: 5px;

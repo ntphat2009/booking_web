@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SignUpModel } from './../../models/SignUpModel';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +17,7 @@ const SignUp = () => {
     const IsValidate = () => {
         let isproceed = true;
         let errormessage = 'Vui lòng nhập ';
-        let errors: string[] = [];
+        const errors: string[] = [];
         const passwordPolicy = /^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}$/;
         if (!FirstName) {
             isproceed = false;
@@ -59,9 +59,9 @@ const SignUp = () => {
         }
         return isproceed;
     }
-    const handlesubmit = async (e:any) => {
+    const handlesubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        let regobj: SignUpModel = { FirstName, LastName, Password, Email, UserName };
+        const regobj: SignUpModel = { FirstName, LastName, Password, Email, UserName };
         if (IsValidate()) {
             try {
                 const response = await axios.post(
@@ -91,7 +91,7 @@ const SignUp = () => {
                 <section className="section-content padding-y">
                     {/* ============================ COMPONENT REGISTER   ================================= */}
                     <div className="card mx-auto" style={{ maxWidth: "520px", marginTop: "40px" }}>
-                    <ToastContainer />
+                        <ToastContainer />
                         <article className="card-body">
                             <header className="mb-4"><h4 className="card-title">Đăng Ký</h4></header>
                             <form onSubmit={handlesubmit}>

@@ -11,7 +11,7 @@ const ListCity: React.FC = () => {
     useEffect(() => {
         const fetchCities = async () => {
             try {
-                const response = await axios.get(`https://localhost:7214/api/Cities/GetAllCity?page=1&pageSize=10&sortBy=desc`);
+                const response = await axios.get(`https://localhost:7214/api/Cities?page=1&pageSize=10&sortBy=updateat`);
                 if (response == null) {
                     throw "response null";
                 }

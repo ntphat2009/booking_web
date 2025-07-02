@@ -3,24 +3,19 @@ import MapComponent from './Map';
 import RangeSlider from './RangeSlider';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { toast } from 'react-toastify';
 import { Property } from '../../models/Property';
-import { City } from '../../models/City';
 import { CartProduct } from '../../components/CartProduct';
 import SearchBox from '../../components/SearchBox';
 import NavRoute from '../../components/NavRoute';
 // import '../../assets'
 const ListProperty: React.FC = () => {
     const { cityUrl } = useParams();
-    const [city, setCity] = useState<City>()
     const [properties, setProperties] = useState<Property[]>([])
     useEffect(() => {
         const fetchCityByName = async () => {
             try {
-                const response = await axios.get(`https://localhost:7214/api/Cities/GetCityByUrl?cityUrl=${cityUrl}`)
-                const data: City = await response.data;
-                const dataProperties: Property[] = data.Properties;
-                setCity(data);
+                const response = await axios.get(`https://localhost:7214/api/Properties/city-url=${cityUrl}?page=1&pageSize=10&sortBy=updateat`)
+                const dataProperties: Property[] = await response.data;
                 setProperties(dataProperties);
             } catch (error) {
                 console.error('Lỗi khi gọi API:', error);
@@ -29,7 +24,8 @@ const ListProperty: React.FC = () => {
         fetchCityByName();
         return () => {
         };
-    }, [])
+    }, [cityUrl])
+    console.log(properties)
     return (
         <div>
             <SearchBox></SearchBox>
@@ -87,7 +83,7 @@ const ListProperty: React.FC = () => {
                     </div>
                     <div className="col-9">
                         <div className="search-key">
-                            <h4>{city?.Name}: tìm thấy {properties.length} chỗ nghỉ</h4>
+                            <h4>{properties[0]?.CityName}: tìm thấy {properties.length} chỗ nghỉ</h4>
                         </div>
                         <div className="tags-list">
                             <div className="search-tag">
@@ -115,12 +111,11 @@ const ListProperty: React.FC = () => {
                                 <span className='x-span'><i className="fas fa-times"></i></span>
                             </div>
                         </div>
-                        {city?.Properties && properties.length > 0 ?
+                        {properties.length > 0 ?
                             (properties.map((property: Property) => (
-                                <CartProduct property={property} cityUrl={city.CityUrl} />
+                                <CartProduct {...property}/>
                             ))
-                            ) : ("")}
-
+                            ) : <p>Không có sản phẩm nào.</p>}
                     </div>
                 </div>
             </div>

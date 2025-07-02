@@ -17,6 +17,7 @@ class Connector {
         this.events = (onMessageReceivedByUser) => {
             this.connection.on("ReceiveMessageFromUser", (from, message) => {
                 onMessageReceivedByUser(from, message);
+                console.log("Tinnhan tu constructor",message)
             });
         };
     }

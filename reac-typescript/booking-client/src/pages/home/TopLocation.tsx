@@ -1,5 +1,4 @@
-import React, { useState, PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +15,7 @@ const TopLocation: React.FC = () => {
     };
     const [activeContent, setActiveContent] = useState('content1'); // Lưu trạng thái của mục nội dung đang hiển thị
 
-    const handleButtonClick = (targetId) => {
+    const handleButtonClick = (targetId:string) => {
         setActiveContent(targetId); // Cập nhật mục đang hiển thị
     };
     return (
