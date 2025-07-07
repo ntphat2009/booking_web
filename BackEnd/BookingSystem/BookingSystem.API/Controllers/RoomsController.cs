@@ -31,8 +31,7 @@ namespace BookingSystem.API.Controllers
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                 Formatting = Formatting.Indented
             });
-            _response.Result = jsonConvert;
-            return Ok(_response);
+            return Ok(jsonConvert);
         }
 
         [HttpGet("url={roomyUrl}")]
@@ -44,8 +43,18 @@ namespace BookingSystem.API.Controllers
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                 Formatting = Formatting.Indented
             });
-            _response.Result = jsonConvert;
-            return Ok(_response);
+            return Ok(jsonConvert);
+        }
+        [HttpGet("room-list")]
+        public async Task<IActionResult> GetRoomListAsync()
+        {
+            var result = await _service.GetRoomListAsync();
+            var jsonConvert = JsonConvert.SerializeObject(result, new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+            return Ok(jsonConvert);
         }
 
         [HttpPost]

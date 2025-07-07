@@ -11,14 +11,16 @@ import ChatBox from '../../layouts/ChatBox';
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { PropertyDes } from '../../models/PropertyDes'
-import { MyImageType } from '../../models/ImageProperty'
-import { ImageProperties } from '../../models/ImageProperty'
+import LayoutImage from '../../components/LayoutImage'
+import { RoomList } from '../../models/RoomList'
 const PropertyDescription: React.FC = () => {
     const navigate = useNavigate();
     const { propertyUrl } = useParams<string>();
     const [tokenValue, setToken] = useState<string>();
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [property, setProperty] = useState<PropertyDes>();
+    const [rooms, setRooms] = useState<RoomList[]>();
+
     const settings = {
         dots: false,          // Hiển thị chấm điều hướng
         slidesToShow: 3,     // Số slide hiển thị cùng lúc
@@ -33,27 +35,21 @@ const PropertyDescription: React.FC = () => {
         const fetchPropertyByUrl = async () => {
             try {
                 const response = await axios.get(`https://localhost:7214/api/Properties/url=${propertyUrl}`)
+                const responseRoom = await axios.get(`https://localhost:7214/api/Rooms/room-list`)
+
                 const data: PropertyDes = response.data;
+                const rooms: RoomList[] = responseRoom.data;
                 setProperty(data);
+                setRooms(rooms);
             } catch (error) {
                 console.log("error when set property data : ", error);
             }
         }
         fetchPropertyByUrl();
         return () => { };
-    }, [])
-
+    }, [propertyUrl])
+    console.log(rooms)
     const images = property?.ImageProperties || [];
-    // Lọc ra các ảnh theo loại
-    const largerImages = images.filter(
-        (img: ImageProperties) => img.ImageType === MyImageType.Larger
-    );
-    const smallImages = images.filter(
-        (img: ImageProperties) => img.ImageType === MyImageType.Small
-    );
-    const smallerImages = images.filter(
-        (img: ImageProperties) => img.ImageType === MyImageType.Smaller
-    );
     const openChatBox = () => {
         if (tokenValue) {
             // eslint-disable-next-line @typescript-eslint/no-unused-expressions
@@ -101,24 +97,8 @@ const PropertyDescription: React.FC = () => {
                 </div>
                 <div className="row mt-4">
                     <div className="col-9 buid-image">
-                        <div className="image-gallery">
-                            {largerImages.map((image:ImageProperties, index:Int16Array) => (
-                                <div key={`larger-${index}`} className="image large">
-                                    <img src={image.ImageURL} alt={image.ImageName} />
-                                </div>
-                            ))}
-                            {smallImages.map((image:ImageProperties, index:Int16Array) => (
-                                <div key={`small-${index}`} className="image small">
-                                    <img src={image.ImageURL} alt={image.ImageName} />
-                                </div>
-                            ))}
-                        </div>
-                        <div className="image-more">
-                            {smallerImages.map((image:ImageProperties, index:Int16Array) => (
-                                <div key={`smaller-${index}`} className="image small more">
-                                    <img src={image.ImageURL} alt={image.ImageName} />
-                                </div>
-                            ))}
+                        <div>
+                            <LayoutImage images={images} />
                         </div>
                     </div>
                     <div className="col-3">
@@ -146,9 +126,10 @@ const PropertyDescription: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row mt-4">
+                <div className="row mt-5">
                     <div className="col-9">
                         <div className="des">
+                            <div className="fw-bold fs-4">Mô tả về chúng tôi</div>
                             {property?.Description}
                         </div>
                     </div>
@@ -158,10 +139,10 @@ const PropertyDescription: React.FC = () => {
                     <table className='table table-bordered'>
                         <thead >
                             <tr>
-                                <th>
+                                <th className='text-white'>
                                     Loại chỗ nghỉ
                                 </th>
-                                <th>
+                                <th className='text-white'>
                                     Số lượng khách
                                 </th>
                                 <th>
@@ -169,14 +150,17 @@ const PropertyDescription: React.FC = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <Link to={""}> Ưu Đãi Đặc Biệt - Phòng Heritage Deluxe Giường Đôi Có Ban Công
-                                    </Link>
-                                </td>
-                                <td>Tối đa 4 khách(2 người lớn)</td>
-                                <td><span className='btn btn-info-nothover'>Hiển thị giá</span></td>
-                            </tr>
+                            {rooms?.map((r: RoomList) => (
+                                <tr>
+                                    <td>
+                                        <Link to={""}>{r.RoomType}
+                                        </Link>
+                                    </td>
+                                    <td>Tối đa {r.MaxPeople} khách</td>
+                                    <td><span className='btn btn-info-nothover'>Hiển thị giá</span></td>
+                                </tr>
+                            ))}
+
                         </tbody>
                     </table>
                 </div>

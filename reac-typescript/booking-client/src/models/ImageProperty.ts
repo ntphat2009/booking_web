@@ -5,8 +5,8 @@ export enum MyImageType {
   Smaller = 2
 }
 export interface ImageProperties extends BaseModel {
-  PropertyID: string;
-  ImageURL: string;
+  PropertyId: string;
+  ImageUrl: string;
   ImageName: string;
   ImageType: MyImageType;
 }

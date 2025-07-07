@@ -3,11 +3,39 @@
   "WorkspaceRootPath": "D:\\Booking Project\\BackEnd\\BookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.api\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|solutionrelative:bookingsystem.api\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.api\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|solutionrelative:bookingsystem.api\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|solutionrelative:bookingsystem.service\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.service\\viewmodel\\room\\roomlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|solutionrelative:bookingsystem.service\\viewmodel\\room\\roomlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.service\\services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|solutionrelative:bookingsystem.service\\services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10C8FCAE-9FFB-456F-8FA3-A523845F2ABB}|BookingSystem.Domain\\BookingSystem.Domain.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.domain\\entity\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10C8FCAE-9FFB-456F-8FA3-A523845F2ABB}|BookingSystem.Domain\\BookingSystem.Domain.csproj|solutionrelative:bookingsystem.domain\\entity\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.service\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|solutionrelative:bookingsystem.service\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|solutionrelative:bookingsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE2E4D5D-0BA0-449F-AE46-69AD0A26A5BF}|BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|d:\\booking project\\backend\\bookingsystem\\bookingsystem.infrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{BE2E4D5D-0BA0-449F-AE46-69AD0A26A5BF}|BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.infrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BE2E4D5D-0BA0-449F-AE46-69AD0A26A5BF}|BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:bookingsystem.infrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
@@ -21,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BE2E4D5D-0BA0-449F-AE46-69AD0A26A5BF}|BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.infrastructure\\repositories\\implementations\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE2E4D5D-0BA0-449F-AE46-69AD0A26A5BF}|BookingSystem.Infrastructure\\BookingSystem.Infrastructure.csproj|solutionrelative:bookingsystem.infrastructure\\repositories\\implementations\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.service\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E679CD2C-5A46-4489-80E2-F7B3C3462F9D}|BookingSystem.Service\\BookingSystem.ApiService.csproj|solutionrelative:bookingsystem.service\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6855A186-5DE2-4C19-911A-AB20C238D1FB}|BookingSystem.API\\BookingSystem.API.csproj|D:\\Booking Project\\BackEnd\\BookingSystem\\bookingsystem.api\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,6 +111,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PropertiesController.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\PropertiesController.cs",
+              "RelativeDocumentMoniker": "BookingSystem.API\\Controllers\\PropertiesController.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\PropertiesController.cs",
+              "RelativeToolTip": "BookingSystem.API\\Controllers\\PropertiesController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:56:02.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "BookingSystem.API\\Controllers\\RoomsController.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\RoomsController.cs*",
+              "RelativeToolTip": "BookingSystem.API\\Controllers\\RoomsController.cs*",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowDgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:31:18.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoomListVM.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\ViewModel\\Room\\RoomListVM.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Service\\ViewModel\\Room\\RoomListVM.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\ViewModel\\Room\\RoomListVM.cs",
+              "RelativeToolTip": "BookingSystem.Service\\ViewModel\\Room\\RoomListVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:12:13.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\Interfaces\\IRoomService.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeToolTip": "BookingSystem.Service\\Services\\Interfaces\\IRoomService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:02:53.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\RoomService.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\RoomService.cs",
+              "RelativeToolTip": "BookingSystem.Service\\Services\\RoomService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAQwD8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:02:47.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Room.cs",
+              "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Domain\\Entity\\Room.cs",
+              "RelativeDocumentMoniker": "BookingSystem.Domain\\Entity\\Room.cs",
+              "ToolTip": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Domain\\Entity\\Room.cs",
+              "RelativeToolTip": "BookingSystem.Domain\\Entity\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T03:00:03.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\appsettings.json",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\appsettings.json",
@@ -94,12 +196,11 @@
               "RelativeToolTip": "BookingSystem.Infrastructure\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-01T18:52:26.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T18:52:26.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\appsettings.json",
               "RelativeDocumentMoniker": "BookingSystem.API\\appsettings.json",
@@ -112,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "PropertyVM.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\ViewModel\\PropertyVM.cs",
               "RelativeDocumentMoniker": "BookingSystem.Service\\ViewModel\\PropertyVM.cs",
@@ -124,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "PropertyRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\Implementations\\PropertyRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\Implementations\\PropertyRepository.cs",
@@ -136,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PropertyService.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\PropertyService.cs",
               "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\PropertyService.cs",
@@ -144,11 +245,12 @@
               "RelativeToolTip": "BookingSystem.Service\\Services\\PropertyService.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:16:24.626Z"
+              "WhenOpened": "2025-07-01T17:16:24.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\GenericRepository\\BaseRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\GenericRepository\\BaseRepository.cs",
@@ -160,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "CitiesController.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\CitiesController.cs",
               "RelativeDocumentMoniker": "BookingSystem.API\\Controllers\\CitiesController.cs",
@@ -172,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "BookingSystem.API\\Controllers\\CategoriesController.cs",
@@ -184,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "BookingsController.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.API\\Controllers\\BookingsController.cs",
               "RelativeDocumentMoniker": "BookingSystem.API\\Controllers\\BookingsController.cs",
@@ -192,11 +294,12 @@
               "RelativeToolTip": "BookingSystem.API\\Controllers\\BookingsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T05:34:21.131Z"
+              "WhenOpened": "2025-06-30T05:34:21.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "BookingDTO.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\DTOs\\BookingDTO.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\DTOs\\BookingDTO.cs",
@@ -208,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "IRoomRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\Contracts\\IRoomRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\Contracts\\IRoomRepository.cs",
@@ -220,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "RoomRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\Implementations\\RoomRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\Implementations\\RoomRepository.cs",
@@ -232,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\BookingService.cs",
@@ -244,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\Interfaces\\ICategoryService.cs",
@@ -256,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "IBookingService.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Service\\Services\\Interfaces\\IBookingService.cs",
               "RelativeDocumentMoniker": "BookingSystem.Service\\Services\\Interfaces\\IBookingService.cs",
@@ -268,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "BookingRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\Implementations\\BookingRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\Implementations\\BookingRepository.cs",
@@ -280,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "IBookingRepository.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Infrastructure\\Repositories\\Contracts\\IBookingRepository.cs",
               "RelativeDocumentMoniker": "BookingSystem.Infrastructure\\Repositories\\Contracts\\IBookingRepository.cs",
@@ -292,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Booking.cs",
               "DocumentMoniker": "D:\\Booking Project\\BackEnd\\BookingSystem\\BookingSystem.Domain\\Entity\\Booking.cs",
               "RelativeDocumentMoniker": "BookingSystem.Domain\\Entity\\Booking.cs",

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, Component } from 'react'
+import React, { useEffect, useRef, useState, ReactEventHandler } from 'react'
 import $ from "jquery"; // Import jQuery
 import "jquery-ui-bundle"; // Import jQuery UI CSS và JS
 import "jquery-ui-bundle/jquery-ui.css";
@@ -7,21 +7,23 @@ const RangeSlider: React.FC = () => {
     const [range, setRange] = useState<[number, number]>([100, 1000]); // State để lưu giá trị slider
     useEffect(() => {
         // Khởi tạo slider sau khi DOM đã được render
-        if (sliderRef.current) {
-            $(sliderRef.current).slideToggle({
+        const current = sliderRef.current;
+        if (current) {
+            $(current).slideToggle({
                 range: true,
                 min: 0,
                 max: 10000,
                 values: range,
-                slide: (event: any, ui: { values: [number, number] }) => {
+                slide: (_event: ReactEventHandler, ui: { values: [number, number] }) => {
                     setRange(ui.values as [number, number]); // Cập nhật giá trị khi trượt slider
                 },
             });
         }
         return () => {
             // Hủy slider khi component bị unmount
-            if (sliderRef.current) {
-                $(sliderRef.current).slideToggle("destroy");
+
+            if (current) {
+                $(current).slideToggle("destroy");
             }
         };
     }, [range]);

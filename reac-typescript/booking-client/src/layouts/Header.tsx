@@ -102,7 +102,6 @@ const Header = () => {
                                                                 <span>Xem tất cả</span>
                                                             </a>
                                                         </div>
-
                                                     </div>
                                                 </>
                                             ) : (
@@ -115,9 +114,6 @@ const Header = () => {
                                                     Đăng xuất
                                                 </span>
                                             </button>
-                                        </div>
-                                        <div className="">
-                                            <span>{payLoad?.UserName}</span>
                                         </div>
                                     </>
                                 ) : (

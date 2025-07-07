@@ -1,4 +1,5 @@
-﻿using BookingSystem.Domain.Entity;
+﻿using BookingSystem.ApiService.ViewModel.Room;
+using BookingSystem.Domain.Entity;
 using BookingSystem.Infrastructure.DTOs;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace BookingSystem.APIService.Services.Interfaces
 {
     public interface IRoomService
     {
+        public Task<IEnumerable<RoomListVM>> GetRoomListAsync();
         public Task<IEnumerable<Room>> GetAllAsync(int page, int pageSize, string sortBy);
         public Task<Room> GetRoomAsync(string roomNumber, string propertyUrl);
         public Task AddRoomAsync(RoomDTO room);

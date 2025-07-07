@@ -11,7 +11,7 @@ export interface PropertyDes extends BaseModel {
   AvgPrice: number;
   Rule: string;
   // Services: any;
-  ImageProperty: ImageProperties;
+  ImageProperties: ImageProperties[];
   // Rooms: any;
   Id: string;
   Description:string;

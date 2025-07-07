@@ -1,4 +1,5 @@
 ﻿
+using BookingSystem.ApiService.ViewModel.Room;
 using BookingSystem.APIService.Services.Interfaces;
 using BookingSystem.Domain.Entity;
 using BookingSystem.Infrastructure.DTOs;
@@ -40,7 +41,27 @@ namespace BookingSystem.APIService.Services
             return await _roomRepository.GetRoomAsync(roomNumber, propertyUrl);
         }
 
-
+        public async Task<IEnumerable<RoomListVM>> GetRoomListAsync()
+        {
+            var rooms = await _roomRepository.GetRoomsAsync(1, 10, "name");
+            var roomList = new List<RoomListVM>();
+            var seemRoomType = new HashSet<string>();
+            foreach (var r in rooms)
+            {
+                if (seemRoomType.Add(r.RoomType))
+                {
+                    var room = new RoomListVM();
+                    {
+                        room.RoomId = r.Id;
+                        room.MaxPeople = r.MaxPeople;
+                        room.RoomType = r.RoomType;
+                        room.PricePerNight = r.PricePerNight;
+                    };
+                    roomList.Add(room);
+                }
+            }
+            return roomList;
+        }
 
         public async Task UpdateRoomAsync(RoomDTO room, string roomNumber)
         {

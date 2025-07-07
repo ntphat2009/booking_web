@@ -40,6 +40,7 @@ header>.container>.container-fluid {
 .fs-9 {
     font-size: 0.6rem !important;
 }
+
 .col-6.logo {
     max-width: 15rem;
     height: 3.5rem;
@@ -743,11 +744,13 @@ input[type="checkbox" i].cb-button {
 .product-img {
     border-radius: 12px;
 }
-.img-cart-product{
+
+.img-cart-product {
     overflow: hidden;
-    width: 100%;    
+    width: 100%;
     border-radius: 12px;
 }
+
 /* .product-info{
     display: flex;
     row-gap: 5px;
@@ -881,26 +884,83 @@ footer {
     float: right;
 }
 
+/* reponside image in propertydes   */
 .image-gallery {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
 }
 
-.image-more {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+.top-section {
+    display: flex;
     gap: 10px;
-    width: 100%;
-    max-width: 900px;
-    margin-top: 10px;
 }
 
+.main-image {
+    flex: 2;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.side-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-images img {
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.bottom-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-wrapper {
+    flex: 1 1 calc(20% - 8px);
+    max-width: calc(20% - 8px);
+    max-height: calc(100% - 8px);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    max-height: 100px;
+
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    user-select: none;
+}
+.overlay2 {
+    position: absolute;
+    inset: 0;                          /* phủ kín cha */
+    background-color: rgba(0, 0, 0, 0.5); /* đen mờ 50% */
+    color: #fff;                       /* chữ trắng */
+    font-size: 20px;                   /* chữ to vừa */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;                 /* bo góc y hệt cha */
+    user-select: none;
+  }
 .image {
     position: relative;
     overflow: hidden;
@@ -914,24 +974,19 @@ footer {
     display: block;
 }
 
-.large {
-    grid-row: span 2;
-}
-
-.more {
-    position: relative;
-}
-
 .overlay {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    pointer-events: none;
+  }
 
 .most-rate {
     display: flex;
@@ -942,6 +997,13 @@ footer {
     padding: 10px;
 }
 
+.text-white{
+    color: white;
+}
+th.text-white{
+    color: white;
+    padding: 6px !important;
+}
 .text-content {
     display: flex;
     text-align: right;
